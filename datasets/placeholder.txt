@@ -1,1 +1,0 @@
-This folder consists of all the datasets for this assignment 

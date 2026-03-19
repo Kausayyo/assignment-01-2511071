@@ -1,4 +1,3 @@
-# assignment-01-2511071
 # Assignment 02 — Data Engineering & Databases
 
 This repository contains solutions for all 6 parts of the assignment covering RDBMS, NoSQL, Data Warehousing, Vector Databases, Data Lakes, and Capstone Architecture Design.

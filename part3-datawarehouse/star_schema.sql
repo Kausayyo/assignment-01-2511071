@@ -1,5 +1,5 @@
 -- ============================================================
--- Part 3 — Data Warehouse: Star Schema
+-- Part 3.1 — Data Warehouse: Star Schema
 -- Source: retail_transactions.csv
 -- 5 stores, 16 products, 3 date formats cleaned to ISO 8601
 -- ============================================================

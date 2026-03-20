@@ -1,3 +1,5 @@
+-- Q1.2 Schema Design
+
 -- --------------------------------------------------------
 CREATE TABLE customers (
     customer_id   VARCHAR(10)   PRIMARY KEY,

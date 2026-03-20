@@ -1,0 +1,11 @@
+## Vector DB Use Case
+
+A traditional keyword-based database search would be fundamentally insufficient for the law firm's use case, and here is why.
+
+Keyword search operates on exact or near-exact term matching. If a lawyer asks "What are the termination clauses?", a keyword search would look for the literal string "termination" in the document. But contracts routinely use synonymous or paraphrased language: "exit provisions," "contract dissolution terms," "right to rescind," or "notice of discontinuation" may all refer to what a lawyer understands as termination clauses. A keyword engine would miss every one of these unless the lawyer manually typed each variation — defeating the purpose of a plain-English interface entirely. In a 500-page contract, the cognitive burden of knowing every possible phrasing is precisely the problem the system is meant to solve.
+
+Vector databases solve this through semantic similarity. When the lawyer types "What are the termination clauses?", a model like `all-MiniLM-L6-v2` (or a legal-domain fine-tuned model) encodes this question into a dense numerical vector that represents its meaning in high-dimensional space. The 500-page contract has already been chunked into passages, each converted into vectors and stored in the vector database (e.g., Pinecone, Weaviate, or pgvector). The retrieval step finds the stored passage vectors most geometrically similar to the query vector — regardless of exact wording.
+
+In practice, the system would work as a Retrieval-Augmented Generation (RAG) pipeline: the vector database retrieves the top-k most semantically relevant contract passages, which are then passed to a language model to generate a precise, cited answer. This handles not just termination clauses but any natural-language query: "Does this contract include a non-compete agreement?", "What penalties apply for late delivery?", or "Is arbitration required before litigation?" — none of which require keyword guessing.
+
+For a law firm handling hundreds of multi-hundred-page contracts, this architecture transforms contract review from a days-long manual process into a seconds-long semantic query — while maintaining the accuracy and citation trail that legal work demands.

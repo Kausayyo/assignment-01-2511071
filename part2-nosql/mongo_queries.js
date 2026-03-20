@@ -1,8 +1,5 @@
-// ============================================================
+
 // Part 2.2 — MongoDB Operations
-// Database: ecommerce_catalog
-// Collection: products
-// ============================================================
 
 // ----- Switch to/create the database -----
 use ecommerce_catalog;

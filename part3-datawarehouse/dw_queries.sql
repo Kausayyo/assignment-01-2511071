@@ -1,6 +1,6 @@
 -- ============================================================
 -- dw_queries.sql
--- Analytical queries for Part 3 — Data Warehouse
+-- Analytical queries for Part 3.2 — Data Warehouse
 -- Run star_schema.sql first to create and populate tables
 -- ============================================================
 
